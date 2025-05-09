@@ -13,7 +13,6 @@ def chat():
     if request.method == "POST":
         data = request.get_json()
         user_message = data.get("message", "")
-        # dummy answer
         return jsonify({"reply": f"Anda mengatakan: {user_message}"})
     else :
         return "Silahkan gunakan metode POST untuk chat.", 200
